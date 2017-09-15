@@ -2,6 +2,19 @@
   "name": "mobius-node",
   "private": "true",
   "version": "0.1.0",
-  "main": "index.js",
-  "repository": "https://github.com/mobius-network/mobius-node"
+  "scripts": {
+    "test": "yarn run lint && ava",
+    "lint": "$(yarn bin)/eslint src test"
+  },
+  "main": "src/mobius.js",
+  "repository": "https://github.com/mobius-network/mobius-node",
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "eslint": "^4.6.1"
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ]
+  }
 }
