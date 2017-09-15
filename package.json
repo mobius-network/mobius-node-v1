@@ -1,0 +1,7 @@
+{
+  "name": "mobius-node",
+  "private": "true",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/mobius-network/mobius-node"
+}
