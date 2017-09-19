@@ -4,16 +4,16 @@ const Mobius = require('../src/mobius');
 test(t => {
   const expected = 'test';
 
-  const mobius = new Mobius({ API_KEY: expected });
+  const mobius = new Mobius({ apiKey: expected });
 
-  t.is(mobius.apiKey, expected);
+  t.is(mobius.getApiKey(), expected);
 })
 
 test(t => {
   const expected = 'new';
 
-  const mobius = new Mobius({ API_KEY: 'old' });
-  mobius.apiKey = expected;
+  const mobius = new Mobius({ apiKey: 'old' });
+  mobius.setApiKey(expected);
 
-  t.is(mobius.apiKey, expected);
+  t.is(mobius.getApiKey(), expected);
 })

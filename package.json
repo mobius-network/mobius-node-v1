@@ -16,5 +16,10 @@
     "files": [
       "test/*.js"
     ]
+  },
+  "dependencies": {
+    "node-fetch": "^1.7.3",
+    "qs": "^6.5.1",
+    "url-join": "^2.0.2"
   }
 }
