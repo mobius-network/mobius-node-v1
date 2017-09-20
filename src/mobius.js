@@ -1,7 +1,8 @@
 const utils = require('./utils');
 
 const resources = {
-  appStore: require('./resources/appStore')
+  appStore: require('./resources/AppStore'),
+  tokens: require('./resources/Tokens'),
 };
 
 function Mobius(options) {
