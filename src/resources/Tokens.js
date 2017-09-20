@@ -1,14 +1,16 @@
 const utils = require('../utils');
 const BaseResource = require('../core/BaseResource');
 
+const param = utils.core.param;
+
 const Tokens = BaseResource.extend({
   resource: 'tokens',
 
   register: function (params) {
-    const tokenType = utils.core.param('tokenType', params);
-    const name = utils.core.param('name', params);
-    const symbol = utils.core.param('symbol', params);
-    const address = utils.core.param('address', params);
+    const tokenType = param('tokenType', params);
+    const name = param('name', params);
+    const symbol = param('symbol', params);
+    const address = param('address', params);
 
     return this.post({
       action:   'register',
@@ -17,8 +19,8 @@ const Tokens = BaseResource.extend({
   },
 
   balance: function (params) {
-    const tokenUid = utils.core.param('tokenUid', params);
-    const address = utils.core.param('address', params);
+    const tokenUid = param('tokenUid', params);
+    const address = param('address', params);
 
     return this.get({
       action:   'balance',
@@ -27,8 +29,8 @@ const Tokens = BaseResource.extend({
   },
 
   createAddress: function (params) {
-    const tokenUid = utils.core.param('tokenUid', params);
-    const managed = utils.core.param('managed', params);
+    const tokenUid = param('tokenUid', params);
+    const managed = param('managed', params);
 
     return this.post({
       action:   'create_address',
