@@ -1,4 +1,5 @@
 const utils = require('../utils');
+const api = require('../api');
 
 BaseResource.extend = utils.core.extend;
 
@@ -17,8 +18,8 @@ BaseResource.prototype = {
     );
 
     return method === 'GET'
-      ? utils.api.get(args)
-      : utils.api.post(args)
+      ? api.get(args)
+      : api.post(args)
   }
 }
 

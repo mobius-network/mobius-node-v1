@@ -46,6 +46,17 @@ const Tokens = BaseResource.extend({
       action:   'register_address',
       payload:  { tokenUid, address }
     });
+  },
+
+  transferManaged: function (params) {
+    const tokenAddressUid = param('tokenAddressUid', params);
+    const addressTo = param('addressTo', params);
+    const numTokens = param('numTokens', params)
+
+    return this.post({
+      action:   'transfer/managed',
+      payload:  { tokenAddressUid, addressTo, numTokens }
+    });
   }
 });
 

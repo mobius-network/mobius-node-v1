@@ -18,5 +18,5 @@ function extend(subClass) {
 
 module.exports = {
   param,
-  extend
+  extend,
 };
