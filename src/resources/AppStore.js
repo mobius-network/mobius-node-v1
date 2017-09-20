@@ -12,6 +12,17 @@ const AppStore = BaseResource.extend({
       action:   'balance',
       payload:  { app_uid: appUid, email }
     });
+  },
+
+  use: function (params) {
+    const appUid = utils.core.param('appUid', params);
+    const email = utils.core.param('email', params);
+    const numCredits = utils.core.param('numCredits', params);
+
+    return this.post({
+      action:   'use',
+      payload:  { app_uid: appUid, email, num_credits: numCredits }
+    });
   }
 });
 

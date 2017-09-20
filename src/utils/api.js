@@ -33,9 +33,9 @@ function get(params) {
 }
 
 function post(params) {
-  const url = baseUrl(params);
+  const url = urljoin(baseUrl(params), '&' + qs.stringify(params.payload));
 
-  return request('POST', auth(params), url, params.payload);
+  return request('POST', auth(params), url, {});
 }
 
 module.exports = {
