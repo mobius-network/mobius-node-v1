@@ -12,7 +12,7 @@ const AppStore = BaseResource.extend({
 
     return this.get({
       action:   'balance',
-      payload:  { app_uid: appUid, email }
+      payload:  { appUid, email }
     });
   },
 
@@ -23,7 +23,7 @@ const AppStore = BaseResource.extend({
 
     return this.post({
       action:   'use',
-      payload:  { app_uid: appUid, email, num_credits: numCredits }
+      payload:  { appUid, email, numCredits }
     });
   }
 });

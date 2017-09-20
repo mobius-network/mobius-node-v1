@@ -14,7 +14,7 @@ const Tokens = BaseResource.extend({
 
     return this.post({
       action:   'register',
-      payload:  { token_type: tokenType, name, symbol, address }
+      payload:  { tokenType, name, symbol, address }
     });
   },
 
@@ -24,7 +24,7 @@ const Tokens = BaseResource.extend({
 
     return this.get({
       action:   'balance',
-      payload:  { token_uid: tokenUid, address }
+      payload:  { tokenUid, address }
     });
   },
 
@@ -34,7 +34,7 @@ const Tokens = BaseResource.extend({
 
     return this.post({
       action:   'create_address',
-      payload:  { token_uid: tokenUid, managed }
+      payload:  { tokenUid, managed }
     });
   },
 
@@ -44,7 +44,7 @@ const Tokens = BaseResource.extend({
 
     return this.post({
       action:   'register_address',
-      payload:  { token_uid: tokenUid, address }
+      payload:  { tokenUid, address }
     });
   }
 });
