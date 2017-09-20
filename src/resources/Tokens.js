@@ -36,6 +36,16 @@ const Tokens = BaseResource.extend({
       action:   'create_address',
       payload:  { token_uid: tokenUid, managed }
     });
+  },
+
+  registerAddress: function (params) {
+    const tokenUid = param('tokenUid', params);
+    const address = param('address', params);
+
+    return this.post({
+      action:   'register_address',
+      payload:  { token_uid: tokenUid, address }
+    });
   }
 });
 
