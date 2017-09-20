@@ -25,6 +25,16 @@ const Tokens = BaseResource.extend({
       payload:  { token_uid: tokenUid, address }
     });
   },
+
+  createAddress: function (params) {
+    const tokenUid = utils.core.param('tokenUid', params);
+    const managed = utils.core.param('managed', params);
+
+    return this.post({
+      action:   'create_address',
+      payload:  { token_uid: tokenUid, managed }
+    });
+  }
 });
 
 module.exports = Tokens;
