@@ -1,5 +1,5 @@
 const utils = require('./utils');
-const ApiError = require('../core/ApiError');
+const ApiError = require('./ApiError');
 
 function request(method, params) {
   const url = utils.makeUrl(params);

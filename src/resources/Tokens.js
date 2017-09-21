@@ -1,5 +1,5 @@
 const utils = require('../utils');
-const BaseResource = require('../core/BaseResource');
+const BaseResource = require('./BaseResource');
 
 const { param } = utils.core;
 
