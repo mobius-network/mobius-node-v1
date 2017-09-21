@@ -79,6 +79,15 @@ const Tokens = BaseResource.extend({
       },
     });
   },
+
+  transferInfo(params) {
+    const tokenAddressTransferUid = param('tokenAddressTransferUid', params);
+
+    return this.get({
+      action: 'transfer/info',
+      payload: { tokenAddressTransferUid },
+    });
+  },
 });
 
 module.exports = Tokens;
