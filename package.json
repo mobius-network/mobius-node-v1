@@ -10,7 +10,9 @@
   "repository": "https://github.com/mobius-network/mobius-node",
   "devDependencies": {
     "ava": "^0.22.0",
-    "eslint": "^4.6.1"
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0"
   },
   "ava": {
     "files": [

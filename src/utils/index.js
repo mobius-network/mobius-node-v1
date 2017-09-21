@@ -6,4 +6,4 @@ module.exports = {
   core,
   object,
   string,
-}
+};

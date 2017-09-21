@@ -8,7 +8,7 @@ function param(name, params, value) {
 
 function extend(subClass) {
   const Super = this;
-  const Constructor = function () { Super.apply(this, arguments); }
+  function Constructor(...args) { Super.apply(this, args); }
 
   Constructor.prototype = Object.create(Super.prototype);
   Object.assign(Constructor.prototype, subClass);

@@ -6,8 +6,8 @@ function request(method, params) {
   const headers = utils.makeHeaders(params);
 
   return utils.makeRequest(method, headers, url, {})
-    .catch(error => {
-      throw new ApiError(params.resource, params.action, error.message)
+    .catch((error) => {
+      throw new ApiError(params.resource, params.action, error.message);
     });
 }
 
@@ -21,5 +21,5 @@ function post(params) {
 
 module.exports = {
   get,
-  post
-}
+  post,
+};

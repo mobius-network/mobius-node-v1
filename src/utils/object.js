@@ -2,9 +2,7 @@ const map = require('map-obj');
 const changeCase = require('change-case');
 
 function toCaseKeys(object, f) {
-  return map(object, function (key, val) {
-      return [f(key), val]
-    }, {deep: true})
+  return map(object, (key, val) => ([f(key), val]), { deep: true });
 }
 
 function toSnakeCaseKeys(object) {

@@ -13,11 +13,11 @@ function handleError(json) {
 }
 
 function makeUrl(params) {
-  const apiKey = params.apiKey;
+  const { apiKey } = params;
   const baseUrl = urljoin(params.host, params.version, params.resource, params.action);
   const query = Object.assign(params.payload, { apiKey });
 
-  return urljoin(baseUrl, '?' + qs.stringify(utils.object.toSnakeCaseKeys(query)));
+  return urljoin(baseUrl, `?${qs.stringify(utils.object.toSnakeCaseKeys(query))}`);
 }
 
 function makeHeaders(params) {
@@ -30,13 +30,13 @@ function makeHeaders(params) {
 
 function makeRequest(method, headers, url, payload) {
   return fetch(url, {
-    method: method,
-    headers: headers,
-    body: payload
+    method,
+    headers,
+    body: payload,
   })
     .then(response => response.json())
     .then(handleError)
-    .then(json => utils.object.toCamelCaseKeys(json))
+    .then(json => utils.object.toCamelCaseKeys(json));
 }
 
 
@@ -45,4 +45,4 @@ module.exports = {
   makeUrl,
   makeHeaders,
   makeRequest,
-}
+};

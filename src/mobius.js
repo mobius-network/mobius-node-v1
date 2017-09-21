@@ -1,27 +1,29 @@
 const utils = require('./utils');
 const resources = require('./resources');
 
+const { param } = utils.core;
+
 function Mobius(options) {
   this.options = {
-    host:     utils.core.param('host', options)     || 'https://mobius.network/api',
-    version:  utils.core.param('version', options)  || 'v1',
-    auth:     utils.core.param('auth', options),
-    apiKey:   utils.core.param('apiKey', options)
-  }
+    host: param('host', options, 'https://mobius.network/api'),
+    version: param('version', options, 'v1'),
+    auth: param('auth', options),
+    apiKey: param('apiKey', options),
+  };
 
-  for (const name in resources) {
+  Object.keys(resources).forEach((name) => {
     this[name] = new resources[name](this.options);
-  }
+  });
 }
 
 Mobius.prototype = {
-  getApiKey: function () {
+  getApiKey() {
     return this.options.apiKey;
   },
 
-  setApiKey: function (apiKey) {
+  setApiKey(apiKey) {
     this.options.apiKey = apiKey;
-  }
-}
+  },
+};
 
 module.exports = Mobius;
