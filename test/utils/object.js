@@ -14,3 +14,14 @@ test('toSnakeCaseKeys', (t) => {
 
   t.deepEqual(actual, expected);
 });
+
+test('removeUndefined', (t) => {
+  const expected = {
+    foo: 42, bar: null, baz: false, spam: '',
+  };
+  const actual = objectUtils.removeUndefined({
+    foo: 42, bar: null, xxx: undefined, baz: false, spam: '',
+  });
+
+  t.deepEqual(actual, expected);
+});

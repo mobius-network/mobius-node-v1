@@ -60,6 +60,25 @@ const Tokens = BaseResource.extend({
       payload: { tokenAddressUid, addressTo, numTokens },
     });
   },
+
+  transferUnmanaged(params) {
+    const addressTo = param('addressTo', params);
+    const numTokens = param('numTokens', params);
+    const privateKey = param('privateKey', params);
+
+    // Optional
+    const tokenUid = param('tokenUid', param);
+    const tokenAddress = param('tokenAddress', param);
+    const gasPrice = param('gasPrice', param);
+    const gasLimit = param('gasLimit', param);
+
+    return this.post({
+      action: 'transfer/unmanaged',
+      payload: {
+        addressTo, numTokens, privateKey, tokenUid, tokenAddress, gasPrice, gasLimit,
+      },
+    });
+  },
 });
 
 module.exports = Tokens;

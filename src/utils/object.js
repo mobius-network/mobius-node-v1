@@ -13,7 +13,19 @@ function toCamelCaseKeys(object) {
   return toCaseKeys(object, changeCase.camel);
 }
 
+function removeUndefined(object) {
+  const result = {};
+
+  Object.keys(object).forEach((key) => {
+    const value = object[key];
+    if (value !== undefined) result[key] = value;
+  });
+
+  return result;
+}
+
 module.exports = {
   toSnakeCaseKeys,
   toCamelCaseKeys,
+  removeUndefined,
 };

@@ -15,7 +15,7 @@ function handleError(json) {
 function makeUrl(params) {
   const { apiKey } = params;
   const baseUrl = urljoin(params.host, params.version, params.resource, params.action);
-  const query = Object.assign(params.payload, { apiKey });
+  const query = Object.assign(utils.object.removeUndefined(params.payload), { apiKey });
 
   return urljoin(baseUrl, `?${qs.stringify(utils.object.toSnakeCaseKeys(query))}`);
 }
