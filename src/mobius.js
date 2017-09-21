@@ -1,9 +1,5 @@
 const utils = require('./utils');
-
-const resources = {
-  appStore: require('./resources/AppStore'),
-  tokens: require('./resources/Tokens'),
-};
+const resources = require('./resources');
 
 function Mobius(options) {
   this.options = {
