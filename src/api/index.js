@@ -7,7 +7,7 @@ function request(method, params) {
 
   return utils.makeRequest(method, headers, url, {})
     .catch(error => {
-      throw ApiError(params.resource, params.action, error.message)
+      throw new ApiError(params.resource, params.action, error.message)
     });
 }
 
