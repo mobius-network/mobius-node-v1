@@ -1,4 +1,4 @@
-# Mobius Node.js APIs Client
+# Mobius Node.js API Client
 
 The Mobius Node.js Client provides simple access to the Mobius API for applications written on Node.js
 
@@ -76,7 +76,7 @@ mobius.appStore
   Get the status and transaction hash of a Mobius managed token transfer.
 
 
-## More inforamtion
+## More information
 
 See the [REST API docs](https://mobius.network/docs/)
 
