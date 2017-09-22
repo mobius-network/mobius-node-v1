@@ -1,27 +1,31 @@
 # Mobius Node.js API Client
 
+[![Version](https://img.shields.io/npm/v/@mobius-network/mobius-node.svg)](https://www.npmjs.org/package/@mobius-network/mobius-node)
+[![Downloads](https://img.shields.io/npm/dm/@mobius-network/mobius-node.svg)](https://www.npmjs.com/package/@mobius-network/mobius-node)
+[![Try on RunKit](https://badge.runkitcdn.com/@mobius-network/mobius-node.svg)](https://runkit.com/npm/@mobius-network/mobius-node)
+
 The Mobius Node.js Client provides simple access to the Mobius API for applications written on Node.js
 
 ## Installation
 
 Install the package with `npm`:
 ```
-$ npm install mobius-node --save
+$ npm install @mobius-network/mobius-node --save
 ```
 or with `yarn`
 ```
-$ yarn add mobius-node
+$ yarn add @mobius-network/mobius-node
 ```
 
 ## Usage
 
 For importing library use:
 ```js
-const Mobius = require('mobius-node');
+const Mobius = require('@mobius-network/mobius-node');
 ```
 On ES6 it's look like:
 ```js
-import Mobius from 'mobius-node';
+import Mobius from '@mobius-network/mobius-node';
 ```
 
 The library need to be configured with your API secret key which you can create in [Mobius DApp Store](https://beta.mobius.network/store/developer)
