@@ -1,6 +1,6 @@
 {
   "name": "mobius-node",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Mobius Node.js API Client",
   "keywords": [
     "mobius",
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git://github.com:mobius-network/mobius-node.git"
   },
-  "bugs:": "https://github.com:mobius-network/mobius-node/issues",
+  "bugs:": "https://github.com/mobius-network/mobius-node/issues",
   "engines": {
     "node": ">=8"
   },
