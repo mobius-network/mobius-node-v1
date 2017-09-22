@@ -28,7 +28,7 @@ On ES6 it's look like:
 import Mobius from '@mobius-network/mobius-node';
 ```
 
-The library need to be configured with your API secret key which you can create in [Mobius DApp Store](https://beta.mobius.network/store/developer)
+The library need to be configured with your API secret key which you can create in [Mobius DApp Store](https://mobius.network/store/developer)
 ```js
 const mobius = new Mobius({
   apiKey: 'your_api_key',
