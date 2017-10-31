@@ -1,6 +1,6 @@
 {
   "name": "@mobius-network/mobius-node",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Mobius Node.js API Client",
   "keywords": [
     "mobius",
