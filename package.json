@@ -27,11 +27,9 @@
     "eslint-plugin-import": "^2.7.0"
   },
   "dependencies": {
+    "axios": "^0.17.0",
     "change-case": "^3.0.1",
-    "map-obj": "^2.0.0",
-    "node-fetch": "^1.7.3",
-    "qs": "^6.5.1",
-    "url-join": "^2.0.2"
+    "map-obj": "^2.0.0"
   },
   "ava": {
     "files": [

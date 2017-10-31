@@ -1,9 +1,12 @@
 {
     "extends": [
-      "airbnb-base"
+        "airbnb-base"
     ],
     "env": {
         "es6": "true",
         "node": "true"
+    },
+    "rules": {
+      "object-curly-newline": ["error", {"ObjectPattern": "never"}]
     }
 }

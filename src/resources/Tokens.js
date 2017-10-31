@@ -1,69 +1,44 @@
-const utils = require('../utils');
-const BaseResource = require('./BaseResource');
-
-const { param } = utils.core;
+const BaseResource = require('../abstract/Resource');
 
 const Tokens = BaseResource.extend({
   resource: 'tokens',
 
-  register(params) {
-    const tokenType = param('tokenType', params);
-    const name = param('name', params);
-    const symbol = param('symbol', params);
-    const address = param('address', params);
-
+  register({ tokenType, name, symbol, address }) {
     return this.post({
       action: 'register',
-      payload: {
-        tokenType, name, symbol, address,
-      },
+      payload: { tokenType, name, symbol, address },
     });
   },
 
-  balance(params) {
-    const tokenUid = param('tokenUid', params);
-    const address = param('address', params);
-
+  balance({ tokenUid, address }) {
     return this.get({
       action: 'balance',
       payload: { tokenUid, address },
     });
   },
 
-  createAddress(params) {
-    const tokenUid = param('tokenUid', params);
-    const managed = param('managed', params);
-
+  createAddress({ tokenUid, managed }) {
     return this.post({
       action: 'create_address',
       payload: { tokenUid, managed },
     });
   },
 
-  registerAddress(params) {
-    const tokenUid = param('tokenUid', params);
-    const address = param('address', params);
-
+  registerAddress({ tokenUid, address }) {
     return this.post({
       action: 'register_address',
       payload: { tokenUid, address },
     });
   },
 
-  transferManaged(params) {
-    const tokenAddressUid = param('tokenAddressUid', params);
-    const addressTo = param('addressTo', params);
-    const numTokens = param('numTokens', params);
-
+  transferManaged({ tokenAddressUid, addressTo, numTokens }) {
     return this.post({
       action: 'transfer/managed',
       payload: { tokenAddressUid, addressTo, numTokens },
     });
   },
 
-  transferInfo(params) {
-    const tokenAddressTransferUid = param('tokenAddressTransferUid', params);
-
+  transferInfo({ tokenAddressTransferUid }) {
     return this.get({
       action: 'transfer/info',
       payload: { tokenAddressTransferUid },

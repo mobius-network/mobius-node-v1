@@ -1,30 +1,14 @@
-const utils = require('../utils');
-const BaseResource = require('./BaseResource');
+const Resource = require('../abstract/Resource');
 
-const { param } = utils.core;
-
-const AppStore = BaseResource.extend({
+const AppStore = Resource.extend({
   resource: 'app_store',
 
-  balance(params) {
-    const appUid = param('appUid', params);
-    const email = param('email', params);
-
-    return this.get({
-      action: 'balance',
-      payload: { appUid, email },
-    });
+  balance({ appUid, email }) {
+    return this.get({ action: 'balance', payload: { appUid, email } });
   },
 
-  use(params) {
-    const appUid = param('appUid', params);
-    const email = param('email', params);
-    const numCredits = param('numCredits', params);
-
-    return this.post({
-      action: 'use',
-      payload: { appUid, email, numCredits },
-    });
+  use({ appUid, email, numCredits }) {
+    return this.post({ action: 'use', payload: { appUid, email, numCredits } });
   },
 });
 
