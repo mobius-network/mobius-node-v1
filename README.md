@@ -73,9 +73,6 @@ mobius.appStore
 - ##### `mobius.tokens.transferManaged({ tokenAddressUid, addressTo, numTokens })`
   Transfer tokens from a Mobius managed address to a specified address.
 
-- ##### `mobius.tokens.transferUnmanaged({ addressTo, numTokens, privateKey })`
-  Perform an ERC20 transfer call sending tokens from the address identified by the `privateKey` to `addressTo`.
-
 - ##### `mobius.tokens.transferInfo({ tokenAddressTransferUid })`
   Get the status and transaction hash of a Mobius managed token transfer.
 
