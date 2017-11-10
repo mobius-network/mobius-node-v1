@@ -33,7 +33,7 @@ Requestor.prototype = {
 
   handleError({ response }) {
     const message = response.data && response.data.error && response.data.error.message
-      ? response.data.error.message : 'Somthing wrong';
+      ? response.data.error.message : 'Something wrong';
 
     throw new ApiError(message);
   },
